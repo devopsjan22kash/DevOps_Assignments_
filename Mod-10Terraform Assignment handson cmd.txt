@@ -1,0 +1,130 @@
+    1  terraform
+    2  sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+    3  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+    4  sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+    5  sudo apt-get update && sudo apt-get install terraform
+    6  terraform -help
+    7  pwd
+    8  terraform
+    9  terraform -version
+   10  pwd
+   11  ls -lrt
+   12  ll
+   13  aws
+   14  apt  install awscli
+   15  aws configure
+   16  cd
+   17  cd .aws
+   18  ll
+   19  cat credentials
+   20  aws s3 ls
+   21  cd
+   22  aws s3 ls
+   23  mkdir example
+   24  cd example/
+   25  touch main.tf
+   26  vi main.tf
+   27  ls
+   28  cd .aws
+   29  cd ..
+   30  cd .aws
+   31  ls
+   32  vi config
+   33  cd ..
+   34  ll
+   35  cd example/
+   36  ll
+   37  cat main.tf
+   38  vi main.tf
+   39  cat main.tf
+   40  vi main.tf
+   41  cat main.tf
+   42  terraform init
+   43  terraform plan
+   44  terraform plan -out ex.plan
+   45  ll
+   46  cat ex.plan
+   47  ll
+   48  terraform apply ex.plan
+   49  ls -lrt
+   50  cat terraform.tfstate
+   51  terraform plan -out ex.plan
+   52  terraform apply ex.plan
+   53  ls
+   54  vi main.tf
+   55  terraform apply ex.plan
+   56  terraform plan -out ex.plan
+   57  terraform apply "ex.plan"
+   58  vi main.tf
+   59  terraform plan -out ex.plan
+   60  terraform apply "ex.plan"
+   61  ls -lrt
+   62  pwd
+   63  ls
+   64  vi  main.tf
+   65  terraform plan -out ex.plan
+   66  ls -lrt
+   67  terraform apply "ex.plan"
+   68  terraform destroy
+   69  ls
+   70  touch backend.tf
+   71  vi backend.tf
+   72  vi main.tf
+   73  clear
+   74  ls -lrt
+   75  terraform plan -out ex.plan
+   76  terraform init
+   77  terraform plan -out dev.plan
+   78  terraform apply dev.plan
+   79  ls
+   80  cat main.tf
+   81  cat backend.tf
+   82  vi main.tf
+   83  terraform init
+   84  terraform apply dev.plan
+   85  terraform plan -out dev.plan
+   86  terraform apply dev.plan
+   87  terraform destroy
+   88  clear
+   89  ls
+   90  ls -lrt
+   91  touch variables.tf
+   92  vi variables.tf
+   93  ll
+   94  cd example/
+   95  ll
+   96  vi variables.tf
+   97  vi main.tf
+   98  touch dev.tfvars
+   99  vi dev.
+  100  vi dev.tfvars
+  101  vi main.tf
+  102  vi variables.tf
+  103  cp main.tf provider.tf
+  104  vi provider.tf
+  105  rm -rf terraform.tfstate*
+  106  ls -lrt
+  107  rm ex.plan dev.plan
+  108  ls -lrt
+  109  vi main.tf
+  110  cat main.tf
+  111  vi variables.tf
+  112  vi dev.tfvars
+  113  ls -lrt
+  114  terraform plan -out dev.plan -var-file dev.tfvars
+  115  vi variables.tf
+  116  terraform plan -out dev.plan -var-file dev.tfvars
+  117  aws configure
+  118  terraform plan -out dev.plan -var-file dev.tfvars
+  119  vi backend.tf
+  120  terraform plan -out dev.plan -var-file dev.tfvars
+  121  vi backend.tf
+  122  terraform plan -out dev.plan -var-file dev.tfvars
+  123  terraform init
+  124  ls -lrt
+  125  terraform init -reconfigure
+  126  terraform plan -out dev.plan -var-file dev.tfvars
+  127  ls -lrt
+  128  terraform apply dev.plan
+  129  terraform workspace list
+  130  terraform workspace new dev
